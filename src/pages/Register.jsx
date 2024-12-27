@@ -40,10 +40,11 @@ const Register = () => {
 
     return (
         <>
-            <Link to="/" className="flex items-center border-2 m-[50px] text-white rounded-lg bg-gradient-to-r from-sky-500 to-indigo-500 p-2 w-[150px]">
+            <Link to="/" className="flex items-center border-2 m-[50px] text-white rounded-lg bg-gradient-to-r from-sky-500 to-indigo-500 p-2 w-[160px]">
                 <IoArrowBack className="text-[20px]" />
-                <p className="text-lg">Back to home</p>
+                <p className="text-lg">Go Back Home</p>
             </Link>
+            
             <div className="flex justify-center mb-[120px]">
                 <form onSubmit={handleSubmit(onSubmit)}
                     method="post" autoComplete="off" className="w-[500px] h-[600] border-2 rounded-lg p-8 shadow-lg">
@@ -91,16 +92,15 @@ const Register = () => {
                             <input type="checkbox" name="aggrement" id="aggrement"
                                 className="text-blue-500 focus:ring-0 rounded-sm cursor-pointer" />
                             <label htmlFor="aggrement" className="text-gray-600 ml-3 cursor-pointer">I have read and agree to the <a
-                                href="#" className="text-red-500">terms & conditions</a></label>
+                                href="#" className="text-red-500 font-bold">terms & conditions</a></label>
                         </div>
                     </div>
                     <div className="mt-4">
                         <button type="submit"
                             className="block w-full py-2 text-center text-white bg-blue-600 border border-blue-500 rounded hover:bg-transparent hover:text-blue-500 transition uppercase font-roboto font-medium">Create an account</button>
                     </div>
-                    <p className="mt-4 text-center text-gray-600">Already have an account? <Link to="/login" className="text-blue-500">Login Now</Link></p>
+                    <p className="mt-4 text-center text-gray-600">Already have an account? <Link to="/login" className="text-blue-500 font-bold">Login Now</Link></p>
                 </form>
-
             </div>
         </>
 
