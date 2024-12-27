@@ -1,5 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "../components/Header";
+import AuthProvider from "../provider/AuthProvider";
 
 const Root = () => {
     const location = useLocation();
@@ -7,8 +8,10 @@ const Root = () => {
 
     return (
         <div>
-            {noHeader || <Header />}
-            <Outlet />
+            <AuthProvider>
+                {noHeader || <Header />}
+                <Outlet />
+            </AuthProvider>
         </div>
     );
 };

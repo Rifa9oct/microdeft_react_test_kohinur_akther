@@ -6,8 +6,10 @@ import { IoArrowBack } from "react-icons/io5";
 import { MdError } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { useAuth } from "../hooks/useAuth";
 
 const Login = () => {
+    const { setAuth } = useAuth();
     const [showPassword, setShowPassword] = useState(false);
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const navigate = useNavigate();
@@ -20,7 +22,7 @@ const Login = () => {
         try {
             const res = await axios.post("https://react-interview.crd4lc.easypanel.host/api/login", user);
             if (res.status === 200) {
-                // console.log(res.data.data);
+                setAuth(res.data.data );
                 navigate("/");
             }
 
