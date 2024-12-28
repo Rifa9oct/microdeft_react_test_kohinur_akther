@@ -33,7 +33,6 @@ const Courses = () => {
                     text: `${res?.data?.status_message}`,
                     icon: "success"
                 });
-                console.log(res.data.data);
                 navigate("/");
             }
 
