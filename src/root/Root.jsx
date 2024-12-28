@@ -4,7 +4,7 @@ import AuthProvider from "../provider/AuthProvider";
 
 const Root = () => {
     const location = useLocation();
-    const noHeader = location.pathname.includes('login') || location.pathname.includes('register');
+    const noHeader = location.pathname.includes('login') || location.pathname.includes('register') || location.pathname.includes('courses');
 
     return (
         <div>

@@ -11,7 +11,7 @@ const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const navigate = useNavigate();
-
+  
     const onSubmit = async (data) => {
         try {
             const name = data.name;
@@ -40,9 +40,9 @@ const Register = () => {
 
     return (
         <>
-            <Link to="/" className="flex items-center border-2 m-[50px] text-white rounded-lg bg-gradient-to-r from-sky-500 to-indigo-500 p-2 w-[160px]">
-                <IoArrowBack className="text-[20px]" />
-                <p className="text-lg">Go Back Home</p>
+            <Link to="/" className="flex items-center border-2 m-[50px] text-white rounded-lg bg-gradient-to-r from-sky-500 to-indigo-500 p-2 w-[140px]">
+                <IoArrowBack className="text-[18px]" />
+                <p className="text-sm font-bold">Go Back Home</p>
             </Link>
             
             <div className="flex justify-center mb-[120px]">
@@ -51,7 +51,7 @@ const Register = () => {
                     <h1 className="text-center text-3xl font-bold mb-8 uppercase">Create <span className="textStyle">Your Account</span></h1>
                     <div className="space-y-2">
                         <div>
-                            <label htmlFor="name" className="text-gray-600 mb-2 block">Full Name</label>
+                            <label htmlFor="name" className="text-gray-600 mb-2 block font-bold">Full Name</label>
                             <input type="text"
                                 {...register("name", { required: true })}
                                 name="name"
@@ -60,7 +60,7 @@ const Register = () => {
                             {errors.name && <span className="text-sm mt-1 text-red-500"><MdError className="inline" /> Name field is required.</span>}
                         </div>
                         <div>
-                            <label htmlFor="email" className="text-gray-600 mb-2 block">Email</label>
+                            <label htmlFor="email" className="text-gray-600 mb-2 block font-bold">Email</label>
                             <input type="email"
                                 {...register("email", { required: true })}
                                 name="email"
@@ -69,7 +69,7 @@ const Register = () => {
                             {errors.email && <span className="text-sm mt-1 text-red-500"><MdError className="inline" /> Email field is required.</span>}
                         </div>
                         <div>
-                            <label htmlFor="password" className="text-gray-600 mb-2 block">Password</label>
+                            <label htmlFor="password" className="text-gray-600 mb-2 block font-bold">Password</label>
                             <div className="relative">
                                 <input type={showPassword ? "text" : "password"}
                                     {...register("password", { required: true, minLength: 8, maxLength: 15 })}
