@@ -22,14 +22,14 @@ const Login = () => {
         try {
             const res = await axios.post("https://react-interview.crd4lc.easypanel.host/api/login", user);
             if (res.status === 200) {
-                setAuth(res.data.data );
+                setAuth(res?.data?.data );
                 navigate("/");
             }
 
         } catch (err) {
             if (err.status === 422) {
                 Swal.fire({
-                    title: `${err.response.data.message}😟`,
+                    title: `${err?.response?.data?.message}😟`,
                     icon: "error",
                 });
             } else {

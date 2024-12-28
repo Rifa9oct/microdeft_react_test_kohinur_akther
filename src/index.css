@@ -8,3 +8,9 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.logotextStyle{
+    background: linear-gradient(90deg,#620afa, #d700f3);
+    background-clip: unset;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

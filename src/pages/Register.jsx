@@ -28,7 +28,7 @@ const Register = () => {
         } catch (error) {
             if (error.status === 422) {
                 Swal.fire({
-                    title: `${error.response.data.message}🙄`,
+                    title: `${error?.response?.data?.message}🙄`,
                     icon: "warning",
                 });
             } else {

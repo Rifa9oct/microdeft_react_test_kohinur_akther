@@ -40,7 +40,7 @@ const Courses = () => {
         } catch (err) {
             if (err.status === 422) {
                 Swal.fire({
-                    title: `${err.response.data.message}😟`,
+                    title: `${err?.response?.data?.message}😟`,
                     icon: "error",
                 });
             } else {
